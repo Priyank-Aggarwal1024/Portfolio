@@ -9,6 +9,7 @@
 }
 .sidebar {
   display: none;
+
 }
 .main {
   height: 100vh;
@@ -68,7 +69,12 @@
 }
 .nav-list ul li {
   display: block;
-  margin: 1rem;
+  margin: .5rem;
+  padding: .5rem;
+}
+.nav-list ul li:hover{
+  text-decoration: underline #18a5a3 4px;
+  line-height: 10px;
 }
 .nav-list ul li a {
   text-decoration: none;
@@ -84,9 +90,10 @@
   position: relative;
   flex-direction: column;
   left: -500px;
-
+  background-color: #181717;
   width: 300px;
-  height: 92vh;
+  z-index: 2;
+  height: 100vh;
 }
 .btn_one {
   display: flex;
@@ -116,6 +123,7 @@
 #check:checked ~ .sidebar {
   left: 3px;
   display: flex;
+
 }
 
 #check:checked ~ .btn_one {
@@ -133,6 +141,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: #181717;
 }
 .list ul li:hover {
   box-shadow: 0 0 3px #18a5a3;
@@ -264,7 +273,10 @@
   justify-content: space-around;
   font-size: 1.2rem;
 }
-
+.about-btn:hover{
+  text-decoration: underline #18a5a3 4px;
+  line-height: 10px;
+}
 .about-img img {
   max-width: 100%;
   height: auto;
@@ -313,7 +325,7 @@
 .project {
   flex-direction: column;
   width: 90%;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 .services-heading,
 .skill-heading,
@@ -422,7 +434,14 @@ input[type="range"]::-webkit-slider-thumb {
   z-index: 0;
   background-color: #18a5a3;
 }
-
+.technical-skill label h5{
+  display: flex;
+  justify-content: space-between;
+}
+.professional-skill label h5{
+  display: flex;
+  justify-content: space-between;
+}
 /* --------------------------------------  Project  ------------------------------------------- */
 
 
@@ -630,6 +649,12 @@ input[type="range"]::-webkit-slider-thumb {
 /* ---------------------Breakpoint Max-Width Less than  -  600px  --------------------------- */
 
 @media only screen and (max-width: 600px) {
+  .portfolio{
+    width: 95%;
+    height: 95%;
+    overflow-x: hidden;
+
+  }
   .nav {
     display: none;
   }
@@ -694,6 +719,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* ---------------------Breakpoint Max-Width Less than  -  420px  --------------------------- */
 @media only screen and (max-width: 420px) {
+  .portfolio{
+    width: 95%;
+    height: 95%;
+    overflow-x: hidden;
+  }
   .h1-nav {
     font-size: 1.5rem;
   }
