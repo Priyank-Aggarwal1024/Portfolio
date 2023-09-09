@@ -43,10 +43,11 @@ let experience = document.querySelector(".experience")
 let education = document.querySelector(".education")
 check.addEventListener('change',function (){
         portfolio.classList.toggle("hidden");
+        
 })
 for(let i=0;i<li.length;i++){
     li[i].addEventListener('click',function (){
-        check.checked = false;
+        check.checked = !check.checked;
 })
 }
 
